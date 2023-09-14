@@ -56,7 +56,23 @@
         }
     }
 
-    console.log(playGame(getComputerChoice(), getPlayerChoice()))
+    function bestOfFive(){
+        let playerScore = 0;
+        let computerScore = 0;
+        let outcome = "";
+        while (playerScore < 3 && computerScore < 3){
+            outcomeOfRound = playGame(getComputerChoice(), getPlayerChoice());
+            if (outcomeOfRound == "The player won!"){
+                playerScore++;  
+            }
+            elif (outcomeOfRound == "The computer won!"){
+                computerScore++;
+            }
+        }
+        playerScore > computerScore ? outcomeOfGame = "The player won the game!": outcome = "The computer won the game!";
+        return outcome
+    }
+    console.log(bestOfFive())
   </script>
 </body>
 </html>
