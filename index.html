@@ -22,7 +22,7 @@
     function getPlayerChoice(){
         var playerChoice = prompt("Please choose either 'rock', 'paper', or 'scissors'.");
         case_insensitive_playerChoice = playerChoice.toLowerCase();
-        if(playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors'){
+        if(case_insensitive_playerChoice === 'rock' || case_insensitive_playerChoice  === 'paper' || case_insensitive_playerChoice  === 'scissors'){
             return playerChoice;
         }else{
             console.log("Error: Please enter a valid choice.");
@@ -56,7 +56,7 @@
         }
     }
 
-    console.log(playGame(getComputerChoice(), getPlayerChoice())
+    console.log(playGame(getComputerChoice(), getPlayerChoice()))
   </script>
 </body>
 </html>
