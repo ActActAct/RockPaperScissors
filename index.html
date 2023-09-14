@@ -30,6 +30,7 @@
     }
 
     function playGame(computerChoice, playerChoice){
+        console.log(computerChoice, playerChoice);
         if(computerChoice === playerChoice){
             return "The game is a tie!";
         }
@@ -65,13 +66,14 @@
             if (outcomeOfRound == "The player won!"){
                 playerScore++;  
             }
-            elif (outcomeOfRound == "The computer won!"){
+            else if (outcomeOfRound == "The computer won!"){
                 computerScore++;
             }
         }
         playerScore > computerScore ? outcomeOfGame = "The player won the game!": outcome = "The computer won the game!";
         return outcome
     }
+
     console.log(bestOfFive())
   </script>
 </body>
