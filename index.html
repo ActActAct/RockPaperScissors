@@ -19,6 +19,44 @@
         }
     }
 
+    function getPlayerChoice(){
+        var playerChoice = prompt("Please choose either 'rock', 'paper', or 'scissors'.");
+        case_insensitive_playerChoice = playerChoice.toLowerCase();
+        if(playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors'){
+            return playerChoice;
+        }else{
+            console.log("Error: Please enter a valid choice.");
+        }
+    }
+
+    function playGame(computerChoice, playerChoice){
+        if(computerChoice === playerChoice){
+            return "The game is a tie!";
+        }
+        if(computerChoice === 'rock'){
+            if(playerChoice === 'paper'){
+                return "The player won!";
+            }else{
+                return "The computer won!";
+            }
+        }
+        if(computerChoice === 'paper'){
+            if(playerChoice === 'scissors'){
+                return "The player won!";
+            }else{
+                return "The computer won!";
+            }
+        }
+        if(computerChoice === 'scissors'){
+            if(playerChoice === 'rock'){
+                return "The player won!";
+            }else{
+                return "The computer won!";
+            }
+        }
+    }
+
+    console.log(playGame(getComputerChoice(), getPlayerChoice())
   </script>
 </body>
 </html>
